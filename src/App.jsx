@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import React, { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
@@ -823,8 +824,17 @@ export default function App() {
               <img src={dhLogo} alt="DH logo" className="h-9 w-9 object-contain" />
             </div>
             <div className="hidden sm:block">
-              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">DAVIS HIGGINS</div>
-              <div className="text-xs text-slate-400">Data Analyst | Data Science & AI | Business Analytics | Data-Driven Decision Making</div>
+              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">
+                DAVIS HIGGINS
+              </div>
+
+              <div className="mt-2 text-sm text-slate-300 font-medium leading-snug">
+                Data Analyst • Data Science & AI
+              </div>
+
+              <div className="text-sm text-slate-400 leading-snug">
+                Predictive Analytics • Decision Systems
+              </div>
             </div>
           </div>
 
