@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/next"
 import React, { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
@@ -820,24 +819,24 @@ export default function App() {
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#08111f]/85 backdrop-blur-xl">
         <div className="section-shell flex items-center justify-between gap-4 py-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white">
-              <img src={dhLogo} alt="DH logo" className="h-9 w-9 object-contain" />
+            <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white">
+              <img src={dhLogo} alt="DH logo" className="h-10 w-10" />
             </div>
             <div className="hidden sm:block">
               <div className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">
                 DAVIS HIGGINS
               </div>
 
-              <div className="mt-2 text-sm text-slate-300 font-medium leading-snug">
-                Data Analyst • Data Science & AI
+              <div className="mt-.5 text-sm text-slate-400 leading-snug">
+                Data Analyst | Data Science & AI | Predictive Analytics | Decision Systems
               </div>
 
-              <div className="text-sm text-slate-400 leading-snug">
-                Predictive Analytics • Decision Systems
-              </div>
-            </div>
+              <div className="mt-.5 text-sm text-slate-400 leading-snug">
+               
+
+            </div> 
           </div>
-
+        </div>
           <nav className="hidden flex-wrap items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 p-2 shadow-glow lg:flex">
             {NAV_ITEMS.map((item) => {
               const Icon = item.icon
