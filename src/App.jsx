@@ -26,6 +26,7 @@ import propifyLogo from './assets/proptrans.png'
 import dhLogo from './assets/dhtrans.png'
 import anthropologyAward from './assets/anthropologycert.png'
 import thecreek from './assets/thecreek.png'
+import resume from './assets/dbh-resume.pdf'
 
 const NAV_ITEMS = [
   { label: 'Home', key: 'home', icon: Home },
@@ -683,10 +684,10 @@ export default function App() {
                       </p>
 
                       <div className="mt-16 flex flex-wrap gap-3">
-                        <a href="/docs/DBH%20Resume.pdf" target="_blank" rel="noreferrer" className="primary-btn">
-  <FileText className="h-4 w-4" />
-  Open Resume
-</a>
+                        <a href={resume} target="_blank" rel="noreferrer" className="primary-btn">
+                          <FileText className="h-4 w-4" />
+                          Open Resume
+                        </a>
                         <button type="button" onClick={() => setActivePage('projects')} className="secondary-btn">
                           Projects
                         </button>
