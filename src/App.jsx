@@ -7,7 +7,6 @@ import {
   Dumbbell,
   ExternalLink,
   FileText,
-  Github,
   GraduationCap,
   HandHelping,
   Home,
@@ -22,43 +21,41 @@ import {
   Trophy,
 } from 'lucide-react'
 
-import headshot from './assets/headshot.jpeg'
-import propifyLogo from './assets/propify-logo.png'
-import dhLogo from './assets/dh-logo.png'
+import headshot from './assets/cleanerheadshot.jpeg'
+import propifyLogo from './assets/proptrans.png'
+import dhLogo from './assets/dhtrans.png'
 import anthropologyAward from './assets/anthropologycert.png'
 import thecreek from './assets/thecreek.png'
 
 const NAV_ITEMS = [
   { label: 'Home', key: 'home', icon: Home },
-  { label: 'Projects', key: 'projects', icon: Code2 },
   { label: 'Experience', key: 'experience', icon: Briefcase },
-  { label: 'Evidence of Impact', key: 'skills-proof', icon: ShieldCheck },
-  { label: 'Resume', key: 'resume', icon: NotebookText },
+  { label: 'Projects', key: 'projects', icon: Code2 },
+  { label: 'Impact', key: 'skills-proof', icon: ShieldCheck },
   { label: 'Education', key: 'education', icon: GraduationCap },
-  { label: 'Hobbies', key: 'hobbies', icon: Trophy },
+  { label: 'Resume', key: 'resume', icon: NotebookText },
+  { label: 'Interests', key: 'interests', icon: Trophy },
   { label: 'Contact', key: 'contact', icon: Mail },
 ]
 
 const STATS = [
-  { value: '20+', label: 'Executive Dashboards' },
-  { value: '100+', label: 'Visualizations Created' },
-  { value: '2,000+', label: 'CRM Records Audited' },
-  { value: '3.84', label: 'UNC Charlotte GPA' },
+  { value: '20+', label: 'Executive Dashboards' },,
+  { value: '$3,000+', label: 'Philanthropy Funds Raised' },
+  { value: '3.84', label: 'Current UNCC GPA' },
+  { value: '1', label: 'Trademarked Product' },
 ]
 
 const PROJECTS = [
   {
-    tag: 'Personal Project',
+    tag: 'Product Platform',
     title: 'Propify',
-    subtitle:
-      'Full-stack NBA player prop analytics platform with a public-facing demo and private production system.',
+    subtitle: 'Full-stack NBA player prop analytics platform with a public-facing demo and private production system.',
     description:
-      'Propify is a trademarked sports analytics platform I built from scratch to replace intuition-based betting with a disciplined, data-driven workflow. The private production version is structured like a real software product, combining modeling, user accounts, tracked performance, and polished product presentation into one system.',
+      'Propify is a trademarked sports analytics platform I built from scratch to turn sports betting into a more disciplined, data-driven decision process through modeling, user-specific tracking, and product-minded design.',
     bullets: [
-      'The engine pulls NBA game log data, calculates weighted recent performance across multiple windows, applies trimmed-mean style recency weighting, and generates projections using distribution-based modeling. Each prop is translated into projected output, floor, ceiling, hit probability, fair odds, confidence, and risk-aware analysis.',
-      'The model accounts for contextual game factors such as opponent allowance proxies, projected minutes, recent form, matchup quality, volatility, and minutes stability. Rather than producing one raw number, the system is built to evaluate how trustworthy the edge may actually be.',
-      'The application includes a single-prop analyzer, 2–4 leg parlay builder, per-user login, protected pick tracking, grading workflows, ROI and net profit calculations, and performance dashboards so users can evaluate whether the process is actually profitable over time.',
-      'The public demo intentionally hides the proprietary model logic and backend infrastructure, but the private version is positioned with real subscription potential: it is structured to support authenticated users, repeat engagement, premium analytics access, and eventual commercialization as a paid sports intelligence product.',
+      'The engine pulls NBA game log data, weights recent performance across multiple windows, applies contextual adjustments, and generates projections, hit probabilities, confidence indicators, and fair-value style outputs for each prop.',
+      'The application includes a polished single-prop workflow, multi-leg parlay analysis, authenticated user access, protected pick tracking, grading workflows, and ROI and profit monitoring so performance can be measured over time.',
+      'The private production version is positioned like a real software product, with clear subscription potential built around repeat usage, premium analytics access, and a scalable decision-support experience.',
     ],
     stack: ['Python', 'Streamlit', 'Supabase', 'Postgres', 'Auth', 'nba_api', 'Pandas', 'NumPy', 'Matplotlib'],
     primary: { label: 'Live Demo', href: 'https://propifydemo.streamlit.app/' },
@@ -67,16 +64,15 @@ const PROJECTS = [
     logo: propifyLogo,
   },
   {
-    tag: 'Statistics & Analytics',
+    tag: 'Statistical Analysis',
     title: 'Hate Crime Data Analysis',
-    subtitle:
-      'In-depth analysis of social issues and their impact across different time periods, offense categories, and demographic patterns.',
+    subtitle: 'In-depth analysis of social issues and their impact across different time periods, offense categories, and demographic patterns.',
     description:
-      'This project used Python and SQL to analyze NYPD hate crime datasets across pre-COVID, during-COVID, and post-COVID periods. The goal was to understand how external societal disruption can affect frequency, bias type, and broader incident behavior.',
+      'This project used Python and SQL to analyze NYPD hate crime datasets across pre-COVID, during-COVID, and post-COVID periods in order to understand how major external events affected crime patterns and bias-related incident behavior.',
     bullets: [
-      'Cleaned and structured raw data so the analysis would be reliable and usable.',
-      'Built visualizations to identify changes in frequency, offense categories, and bias patterns.',
-      'Applied Chi-Square testing and logistic regression to extend the work beyond descriptive analysis into statistical and predictive insight.',
+      'Cleaned and structured raw data so the analysis would be reliable, consistent, and usable.',
+      'Built visualizations to identify changes in frequency, offense categories, and bias patterns across time periods.',
+      'Applied Chi-Square testing and logistic regression to extend the project beyond description into statistical and predictive insight.',
     ],
     stack: ['Python', 'Pandas', 'SQL', 'Matplotlib', 'Chi-Square', 'Logistic Regression'],
     primary: { label: 'GitHub Repository', href: 'https://github.com/DavisHiggins/HateCrimeDataAnalysis' },
@@ -84,15 +80,14 @@ const PROJECTS = [
     logo: dhLogo,
   },
   {
-    tag: 'Data Science Research',
+    tag: 'Research Project',
     title: 'Census Data Analysis',
-    subtitle:
-      'Demographic and socioeconomic analysis of salary outcomes using education, age, race, and sex as predictors.',
+    subtitle: 'Demographic and socioeconomic analysis of salary outcomes using education, age, race, and sex as predictors.',
     description:
-      'This project focused on understanding what factors most strongly influence salary outcomes using U.S. Census data. Education emerged as the strongest predictor, while the project also explored age-related patterns and disparities tied to sex and race.',
+      'This project analyzed U.S. Census data to identify which demographic and socioeconomic factors most strongly influence salary outcomes, with education emerging as the strongest predictor.',
     bullets: [
-      'Applied correlation analysis, ANOVA, and Chi-Square techniques.',
-      'Built visuals that made demographic relationships easier to interpret.',
+      'Applied correlation analysis, ANOVA, and Chi-Square techniques to evaluate relationships among variables.',
+      'Built visualizations that made income patterns and disparities easier to interpret.',
       'Connected findings to broader real-world discussion around inequality, opportunity, and socioeconomic outcomes.',
     ],
     stack: ['Python', 'Visualization', 'Correlation', 'ANOVA', 'Chi-Square'],
@@ -171,7 +166,7 @@ const PROOF_OF_SKILLS = [
     title: 'Perseverance Through Adversity',
     traits: ['Self-Reliance', 'Work Ethic', 'Accountability'],
     text:
-      'It was May 2023, and I was heading to Rock Hill, SC to promote my apparel business and sell t-shirts. My friend who usually ran the table with me was out of town, so I brought in another friend with sales experience to help. The tournament ran Friday through Sunday from 7 a.m. to 8 p.m. each day. While friday went well, on Saturday morning, my buddy woke up with a high fever and had to sit out the rest of the weekend. I considered going back, packing everything up, and leaving, but I decided to keep the table running. I knew it would be less efficient with very few breaks, since I would be handling everything myself: tracking orders, managing inventory, attracting customers, printing designs, processing transactions, and packing all equipment into my Honda Accord. I stayed and ran the table the rest of the weekend to the best of my ability. After paying the tournament owner and deducting costs, I generated just over $1,500 across Saturday and Sunday. I could have taken the easy route and left, but I chose to stay and see how well I could perform under pressure.',
+      'It was May 2023, and I was heading to Rock Hill, SC to promote my apparel business and sell t-shirts. My friend who usually ran the table with me was out of town, so I brought in another friend with sales experience to help. The tournament ran Friday through Sunday from 7 a.m. to 8 p.m. each day. While Friday went well, on Saturday morning, my partner woke up with a high fever and had to sit out the rest of the weekend. I considered going back, packing everything up, and leaving, but I decided to keep the table running. I knew it would be less efficient with very few breaks, since I would be handling everything myself: tracking orders, managing inventory, attracting customers, printing designs, processing transactions, and packing all equipment into my Honda Accord. I stayed and ran the table the rest of the weekend to the best of my ability. After paying the tournament owner and deducting costs, I generated just over $1,500 across Saturday and Sunday. I could have taken the easy route and left, but I chose to stay and see how well I could perform under pressure.',
   },
   {
     title: 'Engineering a Decision Engine',
@@ -181,7 +176,7 @@ const PROOF_OF_SKILLS = [
   },
 ]
 
-const HOBBIES = [
+const INTERESTS = [
   {
     icon: Dumbbell,
     title: 'Weightlifting',
@@ -284,92 +279,154 @@ export default function App() {
   const renderPage = () => {
     switch (activePage) {
       case 'home':
+  return (
+    <motion.div key="home" {...pageAnimation}>
+      <PageShell>
+        <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-8 sm:px-8 lg:px-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(125,211,252,0.12),transparent_32%),radial-gradient(circle_at_top_right,rgba(99,102,241,0.12),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]" />
+          <div className="absolute -left-12 top-10 h-44 w-44 rounded-full bg-sky-400/10 blur-3xl" />
+          <div className="absolute right-0 top-0 h-52 w-52 rounded-full bg-indigo-500/10 blur-3xl" />
+          <div className="absolute bottom-0 left-1/3 h-40 w-40 rounded-full bg-cyan-400/10 blur-3xl" />
+
+          <div className="relative grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+            <div>
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-sm font-medium text-sky-200">
+                <LineChart className="h-4 w-4" />
+                Data Science • Artificial Intelligence • Charlotte, NC
+              </div>
+
+              <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
+                Hi, I'm <span className="bg-gradient-to-r from-sky-300 to-cyan-200 bg-clip-text text-transparent">Davis Higgins</span>
+              </h1>
+
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+                Data Science student at UNC Charlotte building dashboards, reporting systems, and product-oriented tools that make information clearer, faster, and more useful.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+  <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
+    REAL-WORLD DATA EXPERIENCE
+  </div>
+  <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
+    END-TO-END SYSTEM CREATION
+  </div>
+  <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
+    BUSINESS-DRIVEN INSIGHTS
+  </div>
+  <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
+    DECISION-FOCUSED MODELING
+  </div>
+</div>
+
+              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400">
+                Through coursework, personal projects, and internship experience, I have developed skills in data analytics, data cleaning and preprocessing, statistical modeling, machine learning, data visualization, and data governance.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <button type="button" onClick={() => setActivePage('projects')} className="primary-btn">
+                  See Projects
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+                <button type="button" onClick={() => setActivePage('experience')} className="secondary-btn">
+                  Professional Experience
+                </button>
+              </div>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                {STATS.map((item) => (
+                  <div key={item.label} className="glass rounded-3xl p-5 shadow-soft">
+                    <div className="text-2xl font-bold text-white">{item.value}</div>
+                    <div className="mt-1 text-sm text-slate-400">{item.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mx-auto w-full max-w-md">
+              <div className="rounded-[2rem] border border-white/10 bg-[#5f7ea4]/95 p-5 shadow-glow">
+                <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#a8b9d5]">
+                  <div className="aspect-[4/5] bg-[#a8b9d5]">
+                    <img src={headshot} alt="Professional headshot of Davis Higgins" className="h-full w-full object-cover" />
+                  </div>
+                </div>
+
+                <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-[#12203b] p-5">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-14 w-28 items-center justify-center overflow-hidden rounded-2xl bg-white">
+                      <img src={dhLogo} alt="DH logo" className="h-12 w-12 object-contain" />
+                    </div>
+                    <div>
+                      <div className="text-sm uppercase tracking-[0.35em] text-sky-300">Focus</div>
+                      <div className="mt-2 text-base leading-7 text-slate-300">
+                        Motivated student looking for opportunities to apply my skills, develop professionally, grow personally, and learn as much as possible.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-5">
+                    <div className="flex items-center gap-4">
+                      <div className="rounded-2xl bg-sky-400/10 p-4 text-sky-300">
+                        <Briefcase className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <div className="text-sm text-slate-400">Current Role</div>
+                        <div className="mt-1 text-2xl font-semibold text-white">Data Analyst Intern at Kewaunee Scientific Corporation</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </PageShell>
+    </motion.div>
+  )
+
+      case 'experience':
         return (
-          <motion.div key="home" {...pageAnimation}>
+          <motion.div key="experience" {...pageAnimation}>
             <PageShell>
-              <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-                <div>
-                  <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-sm font-medium text-sky-200">
-                    <LineChart className="h-4 w-4" />
-                    Data Science &amp; AI Student • Data Analyst Intern • Charlotte, NC
-                  </div>
+              <SectionHeader
+                eyebrow="EXECUTION → BUSINESS IMPACT"
+                title="Experience"
+                subtitle="Hands-on experience across analytics, operations, and business-facing execution."
+              />
 
-                  <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-                    Hi, I’m{' '}
-                    <span className="bg-gradient-to-r from-sky-300 to-cyan-200 bg-clip-text text-transparent">
-                      Davis Higgins
-                    </span>
-                  </h1>
-
-                  <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-                    Building analytics products, dashboards, and data-driven systems that help people make better business decisions.
-                  </p>
-
-                  <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400">
-                    I am a Data Science student at the University of North Carolina at Charlotte with a minor in Artificial Intelligence. Through coursework, personal projects, and internship experience, I have developed skills in data analytics, data cleaning and preprocessing, statistical modeling, machine learning, data visualization, and data governance.
-                  </p>
-
-                  <div className="mt-8 flex flex-wrap gap-4">
-                    <button type="button" onClick={() => setActivePage('projects')} className="primary-btn">
-                      See Projects
-                      <ArrowRight className="h-4 w-4" />
-                    </button>
-                    <button type="button" onClick={() => setActivePage('experience')} className="secondary-btn">
-                      Professional Experience
-                    </button>
-                  </div>
-
-                  <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-                    {STATS.map((item) => (
-                      <div key={item.label} className="glass rounded-3xl p-5 shadow-soft">
-                        <div className="text-3xl font-semibold text-white">{item.value}</div>
-                        <div className="mt-2 text-sm text-slate-400">{item.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mx-auto w-full max-w-md">
-                  <div className="rounded-[2rem] border border-white/10 bg-[#5f7ea4]/95 p-5 shadow-glow">
-                    <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#a8b9d5]">
-                      <div className="aspect-[4/5] bg-[#a8b9d5]">
-                        <img
-                          src={headshot}
-                          alt="Professional headshot of Davis Higgins"
-                          className="h-full w-full object-cover"
-                        />
-                      </div>
+              <div className="relative space-y-6 before:absolute before:left-[1.1rem] before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-white/10 sm:before:left-6">
+                {EXPERIENCE.map((item, index) => (
+                  <motion.div
+                    key={`${item.title}-${item.company}`}
+                    initial={{ opacity: 0, x: 12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.04 }}
+                    className="relative pl-12 sm:pl-16"
+                  >
+                    <div className="absolute left-0 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-sky-400/30 bg-sky-400/10 text-sky-300 sm:left-1.5">
+                      <Briefcase className="h-4 w-4" />
                     </div>
 
-                    <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-[#12203b] p-5">
-                      <div className="flex items-start gap-4">
-                        <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl bg-white">
-                          <img src={dhLogo} alt="DH logo" className="h-10 w-10 object-contain" />
-                        </div>
+                    <div className="glass rounded-[2rem] p-6 shadow-soft">
+                      <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                         <div>
-                          <div className="text-sm uppercase tracking-[0.35em] text-sky-300">Focus</div>
-                          <div className="mt-2 text-base leading-7 text-slate-300">
-                            Motivated student looking for opportunities to apply my skills, develop professionally, grow personally, and learn as much as possible.
-                          </div>
+                          <div className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">{item.period}</div>
+                          <h3 className="mt-3 text-2xl font-semibold text-white">{item.title}</h3>
+                          <div className="mt-1 text-base text-slate-300">{item.company}</div>
+                          <div className="mt-1 text-sm text-slate-500">{item.detail}</div>
                         </div>
                       </div>
 
-                      <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-5">
-                        <div className="flex items-center gap-4">
-                          <div className="rounded-2xl bg-sky-400/10 p-4 text-sky-300">
-                            <Briefcase className="h-6 w-6" />
-                          </div>
-                          <div>
-                            <div className="text-sm text-slate-400">Current Role</div>
-                            <div className="mt-1 text-2xl font-semibold text-white">
-                              Data Analyst Intern at Kewaunee Scientific Corporation
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <ul className="mt-6 space-y-3 text-sm leading-7 text-slate-300">
+                        {item.bullets.map((bullet) => (
+                          <li key={bullet} className="flex gap-3">
+                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
-                </div>
+                  </motion.div>
+                ))}
               </div>
             </PageShell>
           </motion.div>
@@ -380,9 +437,9 @@ export default function App() {
           <motion.div key="projects" {...pageAnimation}>
             <PageShell>
               <SectionHeader
-                eyebrow="Projects"
-                title="Projects that reflect technical depth, product thinking, and meaningful analytical work"
-                subtitle="Below are recent objectives I have challenged myself to complete, from a trademarked app using 5,000+ lines of private code to an in-depth analysis on social issues and their impact on different demographics."
+                eyebrow="PRODUCTS → ANALYTICAL SOLUTIONS"
+                title="Projects"
+                subtitle="Selected work demonstrating how I build, analyze, and translate data into practical tools and insights."
               />
 
               <div className="space-y-6">
@@ -397,10 +454,12 @@ export default function App() {
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.accent}`} />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,17,31,0.18),rgba(8,17,31,0.9))]" />
                     <div className="relative">
-                      <div className="mb-4 flex items-center gap-3">
-                        <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/10">
-                          <img src={project.logo} alt={`${project.title} logo`} className="h-9 w-9 object-contain" />
-                        </div>
+                      <div className="mb-4 flex items-center gap-4">
+                        <img
+                          src={project.logo}
+                          alt={`${project.title} logo`}
+                          className="h-16 w-16 shrink-0 object-contain bg-transparent sm:h-20 sm:w-20"
+                        />
                         <div className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-200">
                           {project.tag}
                         </div>
@@ -444,63 +503,14 @@ export default function App() {
           </motion.div>
         )
 
-      case 'experience':
-        return (
-          <motion.div key="experience" {...pageAnimation}>
-            <PageShell>
-              <SectionHeader
-                eyebrow="Professional Experience"
-                title="Experience across analytics, operations, leadership, and execution"
-                subtitle="A mix of technical work, business-facing communication, and practical ownership across different environments."
-              />
-
-              <div className="relative space-y-6 before:absolute before:left-[1.1rem] before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-white/10 sm:before:left-6">
-                {EXPERIENCE.map((item, index) => (
-                  <motion.div
-                    key={`${item.title}-${item.company}`}
-                    initial={{ opacity: 0, x: 12 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.04 }}
-                    className="relative pl-12 sm:pl-16"
-                  >
-                    <div className="absolute left-0 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-sky-400/30 bg-sky-400/10 text-sky-300 sm:left-1.5">
-                      <Briefcase className="h-4 w-4" />
-                    </div>
-
-                    <div className="glass rounded-[2rem] p-6 shadow-soft">
-                      <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                        <div>
-                          <div className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">{item.period}</div>
-                          <h3 className="mt-3 text-2xl font-semibold text-white">{item.title}</h3>
-                          <div className="mt-1 text-base text-slate-300">{item.company}</div>
-                          <div className="mt-1 text-sm text-slate-500">{item.detail}</div>
-                        </div>
-                      </div>
-
-                      <ul className="mt-6 space-y-3 text-sm leading-7 text-slate-300">
-                        {item.bullets.map((bullet) => (
-                          <li key={bullet} className="flex gap-3">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
-                            <span>{bullet}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </PageShell>
-          </motion.div>
-        )
-
       case 'skills-proof':
         return (
           <motion.div key="skills-proof" {...pageAnimation}>
             <PageShell>
               <SectionHeader
-                eyebrow="Business Value in Action"
-                title="Evidence of Impact"
-                subtitle="Historical examples of how I approach problems, persist through roadblocks, and create practical value when the answer is not immediately obvious."
+                eyebrow="PROBLEMS → MEASURABLE RESULTS"
+                title="Impact"
+                subtitle="Real-world examples of solving complex problems, overcoming constraints, and delivering results."
               />
 
               <div className="space-y-6">
@@ -513,7 +523,7 @@ export default function App() {
                     className="glass rounded-[2rem] p-6 shadow-soft"
                   >
                     <div className="mb-4 inline-flex rounded-full bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-200">
-                      Value Demonstrated
+                      What This Shows
                     </div>
                     <h3 className="text-xl font-semibold text-white">{item.title}</h3>
 
@@ -531,72 +541,19 @@ export default function App() {
           </motion.div>
         )
 
-            case 'resume':
-        return (
-          <motion.div key="resume" {...pageAnimation}>
-            <PageShell>
-              <SectionHeader eyebrow="Resume" title="Professional materials" showSubtitle={false} />
-
-              <div className="grid items-start gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-                <div className="glass rounded-[2rem] p-7 shadow-soft self-start">
-                  <div className="flex items-start gap-4">
-                    <div className="rounded-2xl bg-white/5 p-3 text-sky-300">
-                      <NotebookText className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-semibold text-white">Quick access</h3>
-                      <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-300">
-                        Click below to view my professional resume or visit my projects page.
-                      </p>
-
-                      <div className="mt-6 flex flex-wrap gap-3">
-                        <a href="/docs/Davis_Higgins_Resume.pdf" target="_blank" rel="noreferrer" className="primary-btn">
-                          <FileText className="h-4 w-4" />
-                          Open Resume
-                        </a>
-                        <button type="button" onClick={() => setActivePage('projects')} className="secondary-btn">
-                          Projects
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid gap-4">
-                  <div className="glass rounded-[1.75rem] p-5 shadow-soft">
-                    <div className="text-sm text-slate-400">Role Target</div>
-                    <div className="mt-2 text-lg font-semibold text-white">Data Scientist / Data Analyst</div>
-                  </div>
-                  <div className="glass rounded-[1.75rem] p-5 shadow-soft">
-                    <div className="text-sm text-slate-400">Tools</div>
-                    <div className="mt-2 text-lg font-semibold text-white">Python, SQL, R, Power BI, Zoho Analytics</div>
-                  </div>
-                  <div className="glass rounded-[1.75rem] p-5 shadow-soft">
-                    <div className="text-sm text-slate-400">Strengths</div>
-                    <div className="mt-2 text-lg font-semibold text-white">
-                      Dashboards, analytics, reporting automation, data quality, and business communication
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </PageShell>
-          </motion.div>
-        )
-        
-
       case 'education':
         return (
           <motion.div key="education" {...pageAnimation}>
             <PageShell>
               <SectionHeader
-                eyebrow="Education & Honors"
-                title="Academic foundation and recognitions"
-                subtitle="Academic base supported by leadership, projects, and applied work outside the classroom."
+                eyebrow="FOUNDATION → TECHNICAL DEVELOPMENT"
+                title="Education"
+                subtitle="Classroom efficiency, technical development, and the foundation behind my skill set."
               />
 
-              <div className="space-y-10"/>
+              <div className="space-y-10">
                 <div>
-                  <h3 className="text-2xl font-semibold text-white">Collegiate Career</h3>
+                  <h3 className="text-2xl font-semibold text-white">Academic Background</h3>
 
                   <div className="mt-6 space-y-6">
                     <div className="glass rounded-[2rem] p-7 shadow-soft">
@@ -611,7 +568,7 @@ export default function App() {
                           </p>
 
                           <div className="mt-6 flex flex-wrap gap-2">
-                            <Pill>GPA 3.84</Pill>
+                            <Pill>GPA: 3.84</Pill>
                             <Pill>2x Chancellor’s List</Pill>
                             <Pill>1x Dean’s List</Pill>
                           </div>
@@ -634,7 +591,7 @@ export default function App() {
 
                           <div className="mt-5 flex flex-wrap gap-2">
                             <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
-                              GPA 4.0
+                              GPA: 4.0
                             </span>
                             <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
                               4x President’s List
@@ -646,35 +603,25 @@ export default function App() {
                   </div>
                 </div>
 
-              
-              <div className="space-y-10"/>
-                
-                  <h3 className="mt-16 text-2xl font-semibold text-white">Honors & Awards</h3>
-                  
+                <div>
+                  <h3 className="mt-16 text-2xl font-semibold text-white">Honors</h3>
+
                   <div className="mt-6 space-y-6">
                     <div className="glass rounded-[2rem] p-7 shadow-soft">
                       <div className="flex items-start gap-4">
                         <div className="rounded-2xl bg-sky-400/10 p-3 text-sky-300">
                           <Medal className="h-5 w-5" />
                         </div>
-                          <div className="w-full">
-                            <h4 className="text-xl font-semibold text-white">
-                              Public Anthropology Award for Excellence in Writing on Public Issues
-                            </h4>
-                            <div className="w-full">
-                            <h4 className="text-2xl font-semibold text-white"></h4>
-                            <p className="mt-2 text-sm text-slate-400">
-                              Center for a Public Anthropology • April 2025
-                            </p>
-                            <div className="mt-5 flex flex-wrap gap-2">
-                              <Pill>Publisized Work</Pill>
-                              <Pill>Storytelling</Pill>
-                            </div>
+                        <div className="w-full">
+                          <h4 className="text-xl font-semibold text-white">Public Anthropology Award for Excellence in Writing on Public Issues</h4>
+                          <p className="mt-2 text-sm text-slate-400">Center for a Public Anthropology • Apr 2025</p>
 
+                          <div className="mt-5 flex flex-wrap gap-2">
+                            <Pill>Published Work</Pill>
+                            <Pill>Storytelling</Pill>
+                          </div>
 
-                          <p className="mt-6 text-sm leading-7 text-slate-300">
-                            Recognized for excellence in writing on public issues.
-                          </p>
+                          <p className="mt-6 text-sm leading-7 text-slate-300">Recognized for excellence in writing on public issues. The publication was selected for its ability to address a public issue through thoughtful, persuasive, and captivating writing.</p>
 
                           <div className="mt-6 flex flex-wrap gap-2">
                             <a
@@ -687,14 +634,14 @@ export default function App() {
                               <ExternalLink className="h-4 w-4" />
                             </a>
 
-                              <a
-                                href={thecreek}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="secondary-btn"
-                              >
-                                Publication
-                                <ExternalLink className="h-4 w-4" />
+                            <a
+                              href={thecreek}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="secondary-btn"
+                            >
+                              Publication
+                              <ExternalLink className="h-4 w-4" />
                             </a>
                           </div>
                         </div>
@@ -702,22 +649,108 @@ export default function App() {
                     </div>
                   </div>
                 </div>
+              </div>
             </PageShell>
           </motion.div>
         )
 
-      case 'hobbies':
+      case 'resume':
         return (
-          <motion.div key="hobbies" {...pageAnimation}>
+          <motion.div key="resume" {...pageAnimation}>
             <PageShell>
               <SectionHeader
-                eyebrow="Hobbies & Interests"
-                title="A more complete picture beyond academics and work"
-                subtitle="Some of my personal interests outside of the office and classroom."
+                eyebrow="SKILLS → PROFESSIONAL READINESS"
+                title="Resume"
+                subtitle="A clear, structured overview of my experience, skills, and professional readiness."
+              />
+
+              <div className="grid items-start gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+                <div className="glass rounded-[2rem] p-9 shadow-soft self-start">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-2xl bg-white/5 p-3 text-sky-300">
+                      <NotebookText className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold text-white">Quick access</h3>
+                      <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-300">
+                        Click below to view my professional resume or visit my projects page.
+                      </p>
+
+                      <div className="mt-16 flex flex-wrap gap-3">
+                        <a href="/docs/Davis_Higgins_Resume.pdf" target="_blank" rel="noreferrer" className="primary-btn">
+                          <FileText className="h-4 w-4" />
+                          Open Resume
+                        </a>
+                        <button type="button" onClick={() => setActivePage('projects')} className="secondary-btn">
+                          Projects
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid gap-4">
+                  <div className="glass rounded-[1.75rem] p-5 shadow-soft">
+                    <div className="text-sm text-slate-400">Tools & Platforms</div>
+                    <div className="mt-2 text-lg font-semibold text-white">Python, SQL, R, Java, Power BI, Zoho, AI</div>
+                  </div>
+                  <div className="glass rounded-[1.75rem] p-5 shadow-soft">
+                    <div className="text-sm text-slate-400">Technical Strengths</div>
+                    <div className="mt-2 text-lg font-semibold text-white">
+                      Exploratory Data Analysis, Dashboard Development, KPI Reporting, Reporting Automation, Data Cleaning, Data Validation
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 glass rounded-[2rem] p-7 shadow-soft">
+                <h3 className="text-2xl font-semibold text-white">Resume Highlights</h3>
+
+                <ul className="mt-5 space-y-3 text-sm leading-7 text-slate-300 sm:text-base">
+                  <li className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                    <span>Data Science student at UNC Charlotte pursuing a minor in Artificial Intelligence.</span>
+                  </li>
+                <li className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                    <span>Hands-on experience in dashboard development, reporting automation, data validation, and business-facing analytics.</span>
+                 </li>
+                  <li className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                    <span>Built and maintained 20+ executive dashboards, created 100+ visualizations, and audited 2,000+ CRM records.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                    <span>Strong working foundation in Python, SQL, R, Power BI, Zoho Analytics, data visualization, and product-oriented problem solving.</span>
+                  </li>
+                </ul>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  <Pill>Dashboard Development</Pill>
+                  <Pill>Reporting Automation</Pill>
+                  <Pill>Product Thinking</Pill>
+                  <Pill>Data Quality</Pill>
+                </div>
+              </div>
+            </PageShell>
+          </motion.div>
+        )
+      
+           
+
+      case 'interests':
+        return (
+          <motion.div key="interests" {...pageAnimation}>
+            <PageShell>
+              <SectionHeader
+                eyebrow="DISCIPLINE → PERSONAL GROWTH"
+                title="Interests"
+                subtitle="Activities and habits that shape my discipline, mindset, and growth outside of work."
               />
 
               <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-                {HOBBIES.map((item) => (
+                {INTERESTS.map((item) => (
                   <InfoCard key={item.title} icon={item.icon} title={item.title} text={item.text} />
                 ))}
               </div>
@@ -730,9 +763,9 @@ export default function App() {
           <motion.div key="contact" {...pageAnimation}>
             <PageShell>
               <SectionHeader
-                eyebrow="Contact"
-                title="Open to internships, professional connections, and date science, analytics, and research roles"
-                subtitle="You can contact me through the social media platforms listed below."
+                eyebrow="CONNECTION → OPPORTUNITY"
+                title="Contact"
+                subtitle="Direct ways to reach me for opportunities, collaboration, or professional conversations."
               />
 
               <div className="mx-auto max-w-5xl">
@@ -749,12 +782,10 @@ export default function App() {
                   <div className="relative">
                     <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-sky-300">
                       <Sparkles className="h-3.5 w-3.5" />
-                      Let’s Connect
+                      Let's Connect
                     </div>
 
-                    <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                      Reach out directly
-                    </h3>
+                    <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Direct Links</h3>
 
                     <p className="mt-4 max-w-3xl text-base leading-8 text-slate-300">
                       I am actively looking for opportunities to apply my skills, continue developing professionally, and keep building meaningful analytics and product-oriented work.
@@ -784,12 +815,8 @@ export default function App() {
                                 <ExternalLink className="h-4 w-4 text-slate-500 transition duration-300 group-hover:text-sky-300" />
                               </div>
 
-                              <div className="mt-5 text-sm uppercase tracking-[0.22em] text-slate-400">
-                                {item.label}
-                              </div>
-                              <div className="mt-2 text-lg font-semibold text-white break-words">
-                                {item.value}
-                              </div>
+                              <div className="mt-5 text-sm uppercase tracking-[0.22em] text-slate-400">{item.label}</div>
+                              <div className="mt-2 text-lg font-semibold text-white break-words">{item.value}</div>
                             </div>
                           </motion.a>
                         )
@@ -819,43 +846,53 @@ export default function App() {
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#08111f]/85 backdrop-blur-xl">
         <div className="section-shell flex items-center justify-between gap-4 py-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white">
-              <img src={dhLogo} alt="DH logo" className="h-10 w-10" />
+            <div className="hidden sm:flex items-center gap-3.5">
+              <div className="flex h-14 w-12 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white">
+                <img src={dhLogo} alt="DH logo" className="h-10 w-10 object-contain" />
+              </div>
+
+              <div className="leading-none">
+                <div className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">
+                  DAVIS HIGGINS
+                </div>
+
+                <div className="text-sm text-slate-400 whitespace-nowrap">
+                  Data Analyst | Data Science &amp; AI |
+                </div>
+
+                <div className="text-sm text-slate-400 whitespace-nowrap">
+                  Statistical Modeling | Predictive Analytics
+                </div>
+              </div>
             </div>
-            <div className="hidden sm:block">
-              <div className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">
-                DAVIS HIGGINS
-              </div>
 
-              <div className="mt-.5 text-sm text-slate-400 leading-snug">
-                Data Analyst | Data Science & AI | Predictive Analytics | Decision Systems
-              </div>
-
-              <div className="mt-.5 text-sm text-slate-400 leading-snug">
-               
-
-            </div> 
+            <div className="sm:hidden flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white">
+              <img src={dhLogo} alt="DH logo" className="h-10 w-10 object-contain" />
+            </div>
           </div>
-        </div>
-          <nav className="hidden flex-wrap items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 p-2 shadow-glow lg:flex">
-            {NAV_ITEMS.map((item) => {
-              const Icon = item.icon
-              const active = activePage === item.key
-              return (
-                <button
-                  key={item.key}
-                  type="button"
-                  onClick={() => setActivePage(item.key)}
-                  className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition ${
-                    active ? 'bg-white text-slate-950' : 'text-slate-300 hover:bg-white/10 hover:text-white'
-                  }`}
-                >
-                  <Icon className="h-4 w-4" />
-                  {item.label}
-                </button>
-              )
-            })}
-          </nav>
+
+          <nav className="hidden lg:flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 shadow-glow">
+  {NAV_ITEMS.map((item) => {
+    const Icon = item.icon
+    const active = activePage === item.key
+
+    return (
+      <button
+        key={item.key}
+        type="button"
+        onClick={() => setActivePage(item.key)}
+        className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition ${
+          active
+            ? 'bg-white text-slate-950'
+            : 'text-slate-300 hover:bg-white/10 hover:text-white'
+        }`}
+      >
+        <Icon className="h-4 w-4 shrink-0" />
+        {item.label}
+      </button>
+    )
+  })}
+</nav>
 
           <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-300 lg:hidden">
             {activeTitle}
@@ -871,7 +908,7 @@ export default function App() {
                   key={item.key}
                   type="button"
                   onClick={() => setActivePage(item.key)}
-                  className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition ${
+                  className={`whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-medium transition ${
                     active ? 'bg-white text-slate-950' : 'text-slate-300'
                   }`}
                 >
@@ -887,5 +924,4 @@ export default function App() {
         <AnimatePresence mode="wait">{renderPage()}</AnimatePresence>
       </main>
     </div>
-  )
-}
+  )}
