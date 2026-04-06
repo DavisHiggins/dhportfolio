@@ -157,18 +157,21 @@ const EXPERIENCE = [
 
 const PROOF_OF_SKILLS = [
   {
+    eyebrow: 'TECHNICAL EXECUTION',
     title: 'Problem-Solving and Commitment to Success',
     traits: ['Dedication', 'Initiative', 'Adaptability'],
     text:
       'During my time at Kewaunee, I regularly met with the sales team to understand what data, reports, and dashboards would best support their decision-making or resolve any present issues. In one of these discussions, the VP of Sales proposed a complex dashboard that would track projects set to expire across multiple timelines - within the next day, week, month, and year - along with many additional components. From a technical standpoint, I immediately recognized a major challenge: the structure he wanted conflicted with limitations in the analytics platform we were using. While it appeared unlikely that the dashboard could be built as requested, I chose not to push back. I took full ownership of the problem and committed to finding a solution. After extensive trial and error, deep research, and experimentation, I eventually identified a workaround that allowed the required data to be structured and displayed correctly. By leveraging available tools, collaborating with colleagues and supervisors, and using AI to accelerate problem-solving, I was able to successfully develop and deliver the dashboard. What began as a seemingly infeasible request became a fully functional executive tool, reinforcing my approach to problem-solving: persistence, adaptability, and a refusal to accept defeat.',
   },
   {
+    eyebrow: 'PRESSURE PERFORMANCE',
     title: 'Perseverance Through Adversity',
     traits: ['Self-Reliance', 'Work Ethic', 'Accountability'],
     text:
       'It was May 2023, and I was heading to Rock Hill, SC to promote my apparel business and sell t-shirts. My friend who usually ran the table with me was out of town, so I brought in another friend with sales experience to help. The tournament ran Friday through Sunday from 7 a.m. to 8 p.m. each day. While Friday went well, on Saturday morning, my partner woke up with a high fever and had to sit out the rest of the weekend. I considered going back, packing everything up, and leaving, but I decided to keep the table running. I knew it would be less efficient with very few breaks, since I would be handling everything myself: tracking orders, managing inventory, attracting customers, printing designs, processing transactions, and packing all equipment into my Honda Accord. I stayed and ran the table the rest of the weekend to the best of my ability. After paying the tournament owner and deducting costs, I generated just over $1,500 across Saturday and Sunday. I could have taken the easy route and left, but I chose to stay and see how well I could perform under pressure.',
   },
   {
+    eyebrow:'SYSTEM ARCHITECTURE',
     title: 'Engineering a Decision Engine',
     traits: ['Innovation', 'Product Thinking', 'Technical Execution', 'System Design'],
     text:
@@ -523,9 +526,8 @@ export default function App() {
                     className="glass rounded-[2rem] p-6 shadow-soft"
                   >
                     <div className="mb-4 inline-flex rounded-full bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-200">
-                      What This Shows
+                      {item.eyebrow}
                     </div>
-                    <h3 className="text-xl font-semibold text-white">{item.title}</h3>
 
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.traits.map((trait) => (
