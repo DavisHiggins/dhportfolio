@@ -752,7 +752,7 @@ export default function App() {
               <SectionHeader
                 eyebrow="DISCIPLINE → PERSONAL GROWTH"
                 title="Interests"
-                subtitle="Activities and habits that shape my discipline, mindset, and growth outside of work."
+                subtitle="Activities and habits that shape my mindset, physical health, and growth outside of work."
               />
 
               <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
