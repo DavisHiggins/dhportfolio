@@ -266,9 +266,9 @@ function PageShell({ children }) {
   return <div className="section-shell px-6 py-14 sm:px-8 lg:px-12">{children}</div>
 }
 
-function SchoolLogo({ src, alt, sizeClass = 'h-14 w-14', imgClass = 'h-10 w-10' }) {
+function SchoolLogo({ src, alt, sizeClass = 'h-20 w-20', imgClass = 'h-20 w-20' }) {
   return (
-    <div className={`flex ${sizeClass} shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2`}>
+    <div className={`flex ${sizeClass} shrink-0 items-center justify-center`}>
       <img src={src} alt={alt} className={`${imgClass} object-contain`} />
     </div>
   )
@@ -571,12 +571,12 @@ export default function App() {
 
                   <div className="mt-6 space-y-6">
                     <div className="glass rounded-[2rem] p-7 shadow-soft">
-                      <div className="flex items-start gap-4">
+                      <div className="flex items-start gap-5">
                         <SchoolLogo
                           src={unccLogo}
                           alt="UNC Charlotte logo"
-                          sizeClass="h-16 w-16"
-                          imgClass="h-11 w-11"
+                          sizeClass="h-24 w-24"
+                          imgClass="h-24 w-24"
                         />
 
                         <div className="w-full">
@@ -599,12 +599,12 @@ export default function App() {
                     </div>
 
                     <div className="glass rounded-[2rem] p-7 shadow-soft">
-                      <div className="flex items-start gap-4">
+                      <div className="flex items-start gap-5">
                         <SchoolLogo
                           src={cvccLogo}
                           alt="Catawba Valley Community College logo"
-                          sizeClass="h-16 w-16"
-                          imgClass="h-11 w-11"
+                          sizeClass="h-24 w-24"
+                          imgClass="h-24 w-24"
                         />
 
                         <div className="w-full">
