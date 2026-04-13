@@ -27,7 +27,7 @@ import dhLogo from './assets/dhtrans.png'
 import anthropologyAward from './assets/anthropologycert.png'
 import thecreek from './assets/thecreek.png'
 import unccLogo from './assets/uncclogotrans.png'
-import cvccLogo from './assets/cvcctrans2.png'
+import cvccLogo from './assets/cvcctrans2!.png'
 
 const NAV_ITEMS = [
   { label: 'Home', key: 'home', icon: Home },
@@ -572,11 +572,11 @@ export default function App() {
                   <div className="mt-6 space-y-6">
   <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
     <div className="flex items-start gap-4">
-      <div className="flex h-[64px] w-[64px] shrink-0 items-start justify-center">
+      <div className="flex h-[72px] w-[72px] shrink-0 items-start justify-center">
         <img
           src={unccLogo}
           alt="UNC Charlotte logo"
-          className="-mt-1 h-[60px] w-[60px] object-contain"
+          className="-mt-1 h-[68px] w-[68px] object-contain"
         />
       </div>
 
@@ -602,11 +602,11 @@ export default function App() {
 
   <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
     <div className="flex items-start gap-4">
-      <div className="flex h-[64px] w-[64px] shrink-0 items-start justify-center">
+      <div className="flex h-[72px] w-[72px] shrink-0 items-start justify-center bg-transparent">
         <img
           src={cvccLogo}
           alt="Catawba Valley Community College logo"
-          className="-mt-1 h-[60px] w-[60px] object-contain"
+          className="-mt-1 h-[68px] w-[68px] object-contain bg-transparent"
         />
       </div>
 
