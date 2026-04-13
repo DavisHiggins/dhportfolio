@@ -602,6 +602,11 @@ export default function App() {
                             <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
                               4x President’s List
                             </span>
+
+                            <p className="mt-6 text-sm leading-7 text-slate-300">
+                              Selected for a dual-enrollment program to gain college credits while completing high school.
+                            </p>
+
                           </div>
                         </div>
                       </div>
