@@ -570,59 +570,63 @@ export default function App() {
                   <h3 className="text-2xl font-semibold text-white">Academic Background</h3>
 
                   <div className="mt-6 space-y-6">
-                    <div className="glass rounded-[2rem] p-7 shadow-soft">
-                      <div className="flex items-start gap-5">
-                        <SchoolLogo
-                          src={unccLogo}
-                          alt="UNC Charlotte logo"
-                          sizeClass="h-24 w-24"
-                          imgClass="h-24 w-24"
-                        />
+  <div className="glass rounded-[2rem] p-7 shadow-soft">
+    <div className="flex items-start">
+      <div className="flex w-[140px] shrink-0 justify-center">
+        <SchoolLogo
+          src={unccLogo}
+          alt="UNC Charlotte logo"
+          sizeClass="h-24 w-24"
+          imgClass="h-24 w-24"
+        />
+      </div>
 
-                        <div className="w-full">
-                          <h4 className="text-2xl font-semibold text-white">University of North Carolina at Charlotte</h4>
-                          <p className="mt-2 text-sm text-slate-400">
-                            B.S. in Data Science • Minor in Artificial Intelligence • Aug 2024 – May 2027
-                          </p>
+      <div className="w-full pl-3">
+        <h4 className="text-2xl font-semibold text-white">University of North Carolina at Charlotte</h4>
+        <p className="mt-2 text-sm text-slate-400">
+          B.S. in Data Science • Minor in Artificial Intelligence • Aug 2024 – May 2027
+        </p>
 
-                          <div className="mt-6 flex flex-wrap gap-2">
-                            <Pill>GPA: 3.84</Pill>
-                            <Pill>2x Chancellor’s List</Pill>
-                            <Pill>1x Dean’s List</Pill>
-                          </div>
+        <div className="mt-6 flex flex-wrap gap-2">
+          <Pill>GPA: 3.84</Pill>
+          <Pill>2x Chancellor’s List</Pill>
+          <Pill>1x Dean’s List</Pill>
+        </div>
 
-                          <p className="mt-6 text-sm leading-7 text-slate-300">
-                            Building a technical foundation in analytics, machine learning, statistical thinking, and applied business problem solving while pairing coursework with internships, product development, and independent projects.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+        <p className="mt-6 text-sm leading-7 text-slate-300">
+          Building a technical foundation in analytics, machine learning, statistical thinking, and applied business problem solving while pairing coursework with internships, product development, and independent projects.
+        </p>
+      </div>
+    </div>
+  </div>
 
-                    <div className="glass rounded-[2rem] p-7 shadow-soft">
-                      <div className="flex items-start gap-5">
-                        <SchoolLogo
-                          src={cvccLogo}
-                          alt="Catawba Valley Community College logo"
-                          sizeClass="h-24 w-24"
-                          imgClass="h-24 w-24"
-                        />
+  <div className="glass rounded-[2rem] p-7 shadow-soft">
+    <div className="flex items-start">
+      <div className="flex w-[140px] shrink-0 justify-center">
+        <SchoolLogo
+          src={cvccLogo}
+          alt="Catawba Valley Community College logo"
+          sizeClass="h-24 w-24"
+          imgClass="h-24 w-24"
+        />
+      </div>
 
-                        <div className="w-full">
-                          <h4 className="text-2xl font-semibold text-white">Catawba Valley Community College</h4>
-                          <p className="mt-2 text-sm text-slate-400">Aug 2022 – May 2024</p>
+      <div className="w-full pl-3">
+        <h4 className="text-2xl font-semibold text-white">Catawba Valley Community College</h4>
+        <p className="mt-2 text-sm text-slate-400">Aug 2022 – May 2024</p>
 
-                          <div className="mt-5 flex flex-wrap gap-2">
-                            <Pill>GPA: 4.0</Pill>
-                            <Pill>4x President’s List</Pill>
-                          </div>
+        <div className="mt-5 flex flex-wrap gap-2">
+          <Pill>GPA: 4.0</Pill>
+          <Pill>4x President’s List</Pill>
+        </div>
 
-                          <p className="mt-6 text-sm leading-7 text-slate-300">
-                            Selected for a dual-enrollment program to gain college credits while completing high school.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+        <p className="mt-6 text-sm leading-7 text-slate-300">
+          Selected for a dual-enrollment program to gain college credits while completing high school.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
                 </div>
 
                 <div>
