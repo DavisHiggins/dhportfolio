@@ -572,11 +572,11 @@ export default function App() {
                   <div className="mt-6 space-y-6">
   <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
     <div className="flex items-start gap-4">
-      <div className="flex h-[72px] w-[72px] shrink-0 items-start justify-center">
+      <div className="flex h-[78px] w-[78px] shrink-0 items-start justify-center">
         <img
           src={unccLogo}
           alt="UNC Charlotte logo"
-          className="-mt-1 h-[68px] w-[68px] object-contain"
+          className="-mt-1 h-[74px] w-[74px] object-contain"
         />
       </div>
 
