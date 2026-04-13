@@ -572,19 +572,14 @@ export default function App() {
                   <div className="mt-6 space-y-6">
   <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
     <div className="flex items-start gap-4">
-      <div className="rounded-2xl bg-sky-400/10 p-3 text-sky-300">
-        <GraduationCap className="h-5 w-5" />
-      </div>
+      <img
+        src={unccLogo}
+        alt="UNC Charlotte logo"
+        className="mt-1 h-12 w-12 shrink-0 object-contain"
+      />
 
       <div className="min-w-0 flex-1">
-        <div className="flex items-center gap-3">
-          <h4 className="text-2xl font-semibold text-white">University of North Carolina at Charlotte</h4>
-          <img
-            src={unccLogo}
-            alt="UNC Charlotte logo"
-            className="h-12 w-12 shrink-0 object-contain"
-          />
-        </div>
+        <h4 className="text-2xl font-semibold text-white">University of North Carolina at Charlotte</h4>
 
         <p className="mt-3 text-sm text-slate-400">
           B.S. in Data Science • Minor in Artificial Intelligence • Aug 2024 – May 2027
@@ -605,19 +600,14 @@ export default function App() {
 
   <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
     <div className="flex items-start gap-4">
-      <div className="rounded-2xl bg-white/5 p-3 text-cyan-300">
-        <GraduationCap className="h-5 w-5" />
-      </div>
+      <img
+        src={cvccLogo}
+        alt="Catawba Valley Community College logo"
+        className="mt-1 h-14 w-14 shrink-0 object-contain"
+      />
 
       <div className="min-w-0 flex-1">
-        <div className="flex items-center gap-3">
-          <h4 className="text-2xl font-semibold text-white">Catawba Valley Community College</h4>
-          <img
-            src={cvccLogo}
-            alt="Catawba Valley Community College logo"
-            className="h-14 w-14 shrink-0 object-contain"
-          />
-        </div>
+        <h4 className="text-2xl font-semibold text-white">Catawba Valley Community College</h4>
 
         <p className="mt-3 text-sm text-slate-400">Aug 2022 – May 2024</p>
 
