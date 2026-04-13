@@ -595,7 +595,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="flex w-[240px] shrink-0 items-center justify-center self-center">
+      <div className="flex w-[240px] shrink-0 items-start justify-center self-start pt-8">
         <img
           src={unccLogo}
           alt="UNC Charlotte logo"
@@ -627,7 +627,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="flex w-[240px] shrink-0 items-center justify-center self-center">
+      <div className="flex w-[240px] shrink-0 items-start justify-center self-start pt-8">
         <img
           src={cvccLogo}
           alt="Catawba Valley Community College logo"
