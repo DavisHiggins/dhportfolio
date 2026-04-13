@@ -26,6 +26,8 @@ import propifyLogo from './assets/proptrans.png'
 import dhLogo from './assets/dhtrans.png'
 import anthropologyAward from './assets/anthropologycert.png'
 import thecreek from './assets/thecreek.png'
+import unccLogo from './assets/uncclogotrans.png'
+import cvccLogo from './assets/cvcclogotrans.png'
 
 const NAV_ITEMS = [
   { label: 'Home', key: 'home', icon: Home },
@@ -39,7 +41,7 @@ const NAV_ITEMS = [
 ]
 
 const STATS = [
-  { value: '20+', label: 'Executive Dashboards' },,
+  { value: '20+', label: 'Executive Dashboards' },
   { value: '$3,000+', label: 'Philanthropy Funds Raised' },
   { value: '3.84', label: 'Current UNCC GPA' },
   { value: '1', label: 'Trademarked Product' },
@@ -171,7 +173,7 @@ const PROOF_OF_SKILLS = [
       'It was May 2023, and I was heading to Rock Hill, SC to promote my apparel business and sell t-shirts. My friend who usually ran the table with me was out of town, so I brought in another friend with sales experience to help. The tournament ran Friday through Sunday from 7 a.m. to 8 p.m. each day. While Friday went well, on Saturday morning, my partner woke up with a high fever and had to sit out the rest of the weekend. I considered going back, packing everything up, and leaving, but I decided to keep the table running. I knew it would be less efficient with very few breaks, since I would be handling everything myself: tracking orders, managing inventory, attracting customers, printing designs, processing transactions, and packing all equipment into my Honda Accord. I stayed and ran the table the rest of the weekend to the best of my ability. After paying the tournament owner and deducting costs, I generated just over $1,500 across Saturday and Sunday. I could have taken the easy route and left, but I chose to stay and see how well I could perform under pressure.',
   },
   {
-    eyebrow:'SYSTEM ARCHITECTURE',
+    eyebrow: 'SYSTEM ARCHITECTURE',
     title: 'Engineering a Decision Engine',
     traits: ['Innovation', 'Product Thinking', 'Technical Execution', 'System Design'],
     text:
@@ -264,6 +266,14 @@ function PageShell({ children }) {
   return <div className="section-shell px-6 py-14 sm:px-8 lg:px-12">{children}</div>
 }
 
+function SchoolLogo({ src, alt, sizeClass = 'h-14 w-14', imgClass = 'h-10 w-10' }) {
+  return (
+    <div className={`flex ${sizeClass} shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2`}>
+      <img src={src} alt={alt} className={`${imgClass} object-contain`} />
+    </div>
+  )
+}
+
 export default function App() {
   const [activePage, setActivePage] = useState('home')
 
@@ -282,109 +292,109 @@ export default function App() {
   const renderPage = () => {
     switch (activePage) {
       case 'home':
-  return (
-    <motion.div key="home" {...pageAnimation}>
-      <PageShell>
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-8 sm:px-8 lg:px-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(125,211,252,0.12),transparent_32%),radial-gradient(circle_at_top_right,rgba(99,102,241,0.12),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]" />
-          <div className="absolute -left-12 top-10 h-44 w-44 rounded-full bg-sky-400/10 blur-3xl" />
-          <div className="absolute right-0 top-0 h-52 w-52 rounded-full bg-indigo-500/10 blur-3xl" />
-          <div className="absolute bottom-0 left-1/3 h-40 w-40 rounded-full bg-cyan-400/10 blur-3xl" />
+        return (
+          <motion.div key="home" {...pageAnimation}>
+            <PageShell>
+              <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-8 sm:px-8 lg:px-10">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(125,211,252,0.12),transparent_32%),radial-gradient(circle_at_top_right,rgba(99,102,241,0.12),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]" />
+                <div className="absolute -left-12 top-10 h-44 w-44 rounded-full bg-sky-400/10 blur-3xl" />
+                <div className="absolute right-0 top-0 h-52 w-52 rounded-full bg-indigo-500/10 blur-3xl" />
+                <div className="absolute bottom-0 left-1/3 h-40 w-40 rounded-full bg-cyan-400/10 blur-3xl" />
 
-          <div className="relative grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-            <div>
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-sm font-medium text-sky-200">
-                <LineChart className="h-4 w-4" />
-                Data Science • Artificial Intelligence • Charlotte, NC
-              </div>
+                <div className="relative grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+                  <div>
+                    <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-sm font-medium text-sky-200">
+                      <LineChart className="h-4 w-4" />
+                      Data Science • Artificial Intelligence • Charlotte, NC
+                    </div>
 
-              <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Hi, I'm <span className="bg-gradient-to-r from-sky-300 to-cyan-200 bg-clip-text text-transparent">Davis Higgins</span>
-              </h1>
+                    <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
+                      Hi, I'm <span className="bg-gradient-to-r from-sky-300 to-cyan-200 bg-clip-text text-transparent">Davis Higgins</span>
+                    </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-                Data Science student at UNC Charlotte building dashboards, reporting systems, and product-oriented tools that make information clearer, faster, and more useful.
-              </p>
+                    <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+                      Data Science student at UNC Charlotte building dashboards, reporting systems, and product-oriented tools that make information clearer, faster, and more useful.
+                    </p>
 
-              <div className="mt-6 flex flex-wrap gap-3">
-  <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
-    REAL-WORLD DATA EXPERIENCE
-  </div>
-  <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
-    END-TO-END SYSTEM CREATION
-  </div>
-  <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
-    BUSINESS-DRIVEN INSIGHTS
-  </div>
-  <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
-    DECISION-FOCUSED MODELING
-  </div>
-</div>
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
+                        REAL-WORLD DATA EXPERIENCE
+                      </div>
+                      <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
+                        END-TO-END SYSTEM CREATION
+                      </div>
+                      <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
+                        BUSINESS-DRIVEN INSIGHTS
+                      </div>
+                      <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-300">
+                        DECISION-FOCUSED MODELING
+                      </div>
+                    </div>
 
-              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400">
-                Through coursework, personal projects, and internship experience, I have developed skills in data analytics, data cleaning and preprocessing, statistical modeling, machine learning, data visualization, and data governance.
-              </p>
+                    <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400">
+                      Through coursework, personal projects, and internship experience, I have developed skills in data analytics, data cleaning and preprocessing, statistical modeling, machine learning, data visualization, and data governance.
+                    </p>
 
-              <div className="mt-8 flex flex-wrap gap-4">
-                <button type="button" onClick={() => setActivePage('projects')} className="primary-btn">
-                  See Projects
-                  <ArrowRight className="h-4 w-4" />
-                </button>
-                <button type="button" onClick={() => setActivePage('experience')} className="secondary-btn">
-                  Professional Experience
-                </button>
-              </div>
+                    <div className="mt-8 flex flex-wrap gap-4">
+                      <button type="button" onClick={() => setActivePage('projects')} className="primary-btn">
+                        See Projects
+                        <ArrowRight className="h-4 w-4" />
+                      </button>
+                      <button type="button" onClick={() => setActivePage('experience')} className="secondary-btn">
+                        Professional Experience
+                      </button>
+                    </div>
 
-              <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-                {STATS.map((item) => (
-                  <div key={item.label} className="glass rounded-3xl p-5 shadow-soft">
-                    <div className="text-2xl font-bold text-white">{item.value}</div>
-                    <div className="mt-1 text-sm text-slate-400">{item.label}</div>
+                    <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                      {STATS.map((item) => (
+                        <div key={item.label} className="glass rounded-3xl p-5 shadow-soft">
+                          <div className="text-2xl font-bold text-white">{item.value}</div>
+                          <div className="mt-1 text-sm text-slate-400">{item.label}</div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                ))}
-              </div>
-            </div>
 
-            <div className="mx-auto w-full max-w-md">
-              <div className="rounded-[2rem] border border-white/10 bg-[#5f7ea4]/95 p-5 shadow-glow">
-                <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#a8b9d5]">
-                  <div className="aspect-[4/5] bg-[#a8b9d5]">
-                    <img src={headshot} alt="Professional headshot of Davis Higgins" className="h-full w-full object-cover" />
+                  <div className="mx-auto w-full max-w-md">
+                    <div className="rounded-[2rem] border border-white/10 bg-[#5f7ea4]/95 p-5 shadow-glow">
+                      <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#a8b9d5]">
+                        <div className="aspect-[4/5] bg-[#a8b9d5]">
+                          <img src={headshot} alt="Professional headshot of Davis Higgins" className="h-full w-full object-cover" />
+                        </div>
+                      </div>
+
+                      <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-[#12203b] p-5">
+                        <div className="flex items-start gap-4">
+                          <div className="flex h-14 w-28 items-center justify-center overflow-hidden rounded-2xl bg-white">
+                            <img src={dhLogo} alt="DH logo" className="h-12 w-12 object-contain" />
+                          </div>
+                          <div>
+                            <div className="text-sm uppercase tracking-[0.35em] text-sky-300">Focus</div>
+                            <div className="mt-2 text-base leading-7 text-slate-300">
+                              Motivated student looking for opportunities to apply my skills, develop professionally, grow personally, and learn as much as possible.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-5">
+                          <div className="flex items-center gap-4">
+                            <div className="rounded-2xl bg-sky-400/10 p-4 text-sky-300">
+                              <Briefcase className="h-6 w-6" />
+                            </div>
+                            <div>
+                              <div className="text-sm text-slate-400">Current Role</div>
+                              <div className="mt-1 text-2xl font-semibold text-white">Data Analyst Intern at Kewaunee Scientific Corporation</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-[#12203b] p-5">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-14 w-28 items-center justify-center overflow-hidden rounded-2xl bg-white">
-                      <img src={dhLogo} alt="DH logo" className="h-12 w-12 object-contain" />
-                    </div>
-                    <div>
-                      <div className="text-sm uppercase tracking-[0.35em] text-sky-300">Focus</div>
-                      <div className="mt-2 text-base leading-7 text-slate-300">
-                        Motivated student looking for opportunities to apply my skills, develop professionally, grow personally, and learn as much as possible.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-5">
-                    <div className="flex items-center gap-4">
-                      <div className="rounded-2xl bg-sky-400/10 p-4 text-sky-300">
-                        <Briefcase className="h-6 w-6" />
-                      </div>
-                      <div>
-                        <div className="text-sm text-slate-400">Current Role</div>
-                        <div className="mt-1 text-2xl font-semibold text-white">Data Analyst Intern at Kewaunee Scientific Corporation</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </PageShell>
-    </motion.div>
-  )
+            </PageShell>
+          </motion.div>
+        )
 
       case 'experience':
         return (
@@ -529,9 +539,7 @@ export default function App() {
                       {item.eyebrow}
                     </div>
 
-                    <h3 className="text-xl font-semibold text-white">
-                      {item.title}
-                    </h3>
+                    <h3 className="text-xl font-semibold text-white">{item.title}</h3>
 
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.traits.map((trait) => (
@@ -564,9 +572,13 @@ export default function App() {
                   <div className="mt-6 space-y-6">
                     <div className="glass rounded-[2rem] p-7 shadow-soft">
                       <div className="flex items-start gap-4">
-                        <div className="rounded-2xl bg-sky-400/10 p-3 text-sky-300">
-                          <GraduationCap className="h-5 w-5" />
-                        </div>
+                        <SchoolLogo
+                          src={unccLogo}
+                          alt="UNC Charlotte logo"
+                          sizeClass="h-16 w-16"
+                          imgClass="h-11 w-11"
+                        />
+
                         <div className="w-full">
                           <h4 className="text-2xl font-semibold text-white">University of North Carolina at Charlotte</h4>
                           <p className="mt-2 text-sm text-slate-400">
@@ -588,26 +600,25 @@ export default function App() {
 
                     <div className="glass rounded-[2rem] p-7 shadow-soft">
                       <div className="flex items-start gap-4">
-                        <div className="rounded-2xl bg-white/5 p-3 text-cyan-300">
-                          <GraduationCap className="h-5 w-5" />
-                        </div>
+                        <SchoolLogo
+                          src={cvccLogo}
+                          alt="Catawba Valley Community College logo"
+                          sizeClass="h-16 w-16"
+                          imgClass="h-11 w-11"
+                        />
+
                         <div className="w-full">
-                          <h4 className="text-xl font-semibold text-white">Catawba Valley Community College</h4>
+                          <h4 className="text-2xl font-semibold text-white">Catawba Valley Community College</h4>
                           <p className="mt-2 text-sm text-slate-400">Aug 2022 – May 2024</p>
 
                           <div className="mt-5 flex flex-wrap gap-2">
-                            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
-                              GPA: 4.0
-                            </span>
-                            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
-                              4x President’s List
-                            </span>
-
-                            <p className="mt-6 text-sm leading-7 text-slate-300">
-                              Selected for a dual-enrollment program to gain college credits while completing high school.
-                            </p>
-
+                            <Pill>GPA: 4.0</Pill>
+                            <Pill>4x President’s List</Pill>
                           </div>
+
+                          <p className="mt-6 text-sm leading-7 text-slate-300">
+                            Selected for a dual-enrollment program to gain college credits while completing high school.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -632,7 +643,9 @@ export default function App() {
                             <Pill>Storytelling</Pill>
                           </div>
 
-                          <p className="mt-6 text-sm leading-7 text-slate-300">Recognized for excellence in writing on public issues. The publication was selected for its ability to address a public issue through thoughtful, persuasive, and captivating writing.</p>
+                          <p className="mt-6 text-sm leading-7 text-slate-300">
+                            Recognized for excellence in writing on public issues. The publication was selected for its ability to address a public issue through thoughtful, persuasive, and captivating writing.
+                          </p>
 
                           <div className="mt-6 flex flex-wrap gap-2">
                             <a
@@ -709,7 +722,6 @@ export default function App() {
                     <div className="text-sm text-slate-400">Technical Strengths</div>
                     <div className="mt-2 text-lg font-semibold text-white">
                       Exploratory Data Analysis, Dashboard Development, KPI Reporting, Reporting Automation, Data Cleaning, Data Validation
-
                     </div>
                   </div>
                 </div>
@@ -723,10 +735,10 @@ export default function App() {
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
                     <span>Data Science student at UNC Charlotte pursuing a minor in Artificial Intelligence.</span>
                   </li>
-                <li className="flex gap-3">
+                  <li className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
                     <span>Hands-on experience in dashboard development, reporting automation, data validation, and business-facing analytics.</span>
-                 </li>
+                  </li>
                   <li className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
                     <span>Built and maintained 20+ executive dashboards, created 100+ visualizations, and audited 2,000+ CRM records.</span>
@@ -747,8 +759,6 @@ export default function App() {
             </PageShell>
           </motion.div>
         )
-      
-           
 
       case 'interests':
         return (
@@ -827,7 +837,7 @@ export default function App() {
                               </div>
 
                               <div className="mt-5 text-sm uppercase tracking-[0.22em] text-slate-400">{item.label}</div>
-                              <div className="mt-2 text-lg font-semibold text-white break-words">{item.value}</div>
+                              <div className="mt-2 break-words text-lg font-semibold text-white">{item.value}</div>
                             </div>
                           </motion.a>
                         )
@@ -857,53 +867,51 @@ export default function App() {
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#08111f]/85 backdrop-blur-xl">
         <div className="section-shell flex items-center justify-between gap-4 py-4">
           <div className="flex items-center gap-3">
-            <div className="hidden sm:flex items-center gap-3.5">
+            <div className="hidden items-center gap-3.5 sm:flex">
               <div className="flex h-14 w-12 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white">
                 <img src={dhLogo} alt="DH logo" className="h-10 w-10 object-contain" />
               </div>
 
               <div className="leading-none">
-                <div className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">
-                  DAVIS HIGGINS
-                </div>
+                <div className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">DAVIS HIGGINS</div>
 
-                <div className="text-sm text-slate-400 whitespace-nowrap">
+                <div className="whitespace-nowrap text-sm text-slate-400">
                   Data Analyst | Data Science &amp; AI |
                 </div>
 
-                <div className="text-sm text-slate-400 whitespace-nowrap">
+                <div className="whitespace-nowrap text-sm text-slate-400">
                   Statistical Modeling | Predictive Analytics
                 </div>
               </div>
             </div>
 
-            <div className="sm:hidden flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white">
+            <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white sm:hidden">
               <img src={dhLogo} alt="DH logo" className="h-10 w-10 object-contain" />
             </div>
           </div>
 
-          <nav className="hidden lg:flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 shadow-glow">
-  {NAV_ITEMS.map((item) => {
-    const Icon = item.icon
-    const active = activePage === item.key
+          <nav className="hidden items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 shadow-glow lg:flex">
+            {NAV_ITEMS.map((item) => {
+              const Icon = item.icon
+              const active = activePage === item.key
 
-    return (
-      <button
-        key={item.key}
-        type="button"
-        onClick={() => setActivePage(item.key)}
-        className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition ${
-          active
-            ? 'bg-white text-slate-950'
-            : 'text-slate-300 hover:bg-white/10 hover:text-white'
-        }`}
-      >
-        <Icon className="h-4 w-4 shrink-0" />
-        {item.label}
-      </button>
-    )
-  })}
-</nav>
+              return (
+                <button
+                  key={item.key}
+                  type="button"
+                  onClick={() => setActivePage(item.key)}
+                  className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition ${
+                    active
+                      ? 'bg-white text-slate-950'
+                      : 'text-slate-300 hover:bg-white/10 hover:text-white'
+                  }`}
+                >
+                  <Icon className="h-4 w-4 shrink-0" />
+                  {item.label}
+                </button>
+              )
+            })}
+          </nav>
 
           <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-300 lg:hidden">
             {activeTitle}
@@ -935,4 +943,5 @@ export default function App() {
         <AnimatePresence mode="wait">{renderPage()}</AnimatePresence>
       </main>
     </div>
-  )}
+  )
+}
