@@ -571,7 +571,7 @@ export default function App() {
 
                   <div className="mt-6 space-y-6">
   <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
-    <div className="flex items-start gap-2">
+    <div className="flex items-start gap-1">
       <div className="flex h-[100px] w-[100px] shrink-0 items-start justify-center">
         <img
           src={unccLogo}
