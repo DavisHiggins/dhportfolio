@@ -576,7 +576,7 @@ export default function App() {
         <img
           src={unccLogo}
           alt="UNC Charlotte logo"
-          className="mt-0 h-[72px] w-[72px] object-contain"
+          className="mt-0 h-[95px] w-[95px] object-contain"
         />
       </div>
 
