@@ -570,13 +570,13 @@ export default function App() {
                   <h3 className="text-2xl font-semibold text-white">Academic Background</h3>
 
                   <div className="mt-6 space-y-6">
-  <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
-    <div className="flex items-start gap-1">
-      <div className="flex h-[110px] w-[185px] shrink-0 items-start justify-center">
+  <div className="glass rounded-[2rem] px-3 py-7 shadow-soft">
+    <div className="flex items-start gap-2.5">
+      <div className="flex h-[84px] w-[86px] shrink-0 items-start justify-center">
         <img
           src={unccLogo}
           alt="UNC Charlotte logo"
-          className="mt-0 h-[105px] w-[80px] object-contain"
+          className="mt-0 h-[55px] w-[85px] object-contain"
         />
       </div>
 
@@ -600,18 +600,18 @@ export default function App() {
     </div>
   </div>
 
-  <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
-    <div className="flex items-start gap-6">
-      <div className="flex h-[84px] w-[84px] shrink-0 items-start justify-center">
+  <div className="glass rounded-[2rem] px-4 py-7 shadow-soft">
+    <div className="flex items-start gap-2">
+      <div className="flex h-[70px] w-[84px] shrink-0 items-start justify-center">
         <img
           src={cvccLogo}
           alt="Catawba Valley Community College logo"
-          className="mt-0 h-[65px] w-[65px] object-contain"
+          className="mt-0 h-[56px] w-[55px] object-contain"
         />
       </div>
 
       <div className="min-w-0 flex-1">
-        <h4 className="text-2xl font-semibold text-white">Catawba Valley Community College</h4>
+        <h4 className="text-xl font-semibold text-white">Catawba Valley Community College</h4>
 
         <p className="mt-3 text-sm text-slate-400">Aug 2022 – May 2024</p>
 
@@ -631,11 +631,11 @@ export default function App() {
                 <div>
                   <h3 className="mt-16 text-2xl font-semibold text-white">Honors</h3>
 
-                  <div className="mt-6 space-y-6">
+                  <div className="mt-6 space-y-5">
                     <div className="glass rounded-[2rem] p-7 shadow-soft">
-                      <div className="flex items-start gap-4">
+                      <div className="flex items-start gap-7">
                         <div className="rounded-2xl bg-sky-400/10 p-3 text-sky-300">
-                          <Medal className="h-5 w-5" />
+                          <Medal className="h-8 w-7" />
                         </div>
                         <div className="w-full">
                           <h4 className="text-xl font-semibold text-white">Public Anthropology Award for Excellence in Writing on Public Issues</h4>
