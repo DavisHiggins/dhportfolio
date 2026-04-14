@@ -577,7 +577,7 @@ export default function App() {
           src={unccLogo}
           alt="UNC Charlotte logo"
           className="-mt-1 h-[74px] w-[74px] object-contain"
-        />
+        >
       </div>
 
       <div className="min-w-0 flex-1">
