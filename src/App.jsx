@@ -572,11 +572,11 @@ export default function App() {
                   <div className="mt-6 space-y-6">
   <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
     <div className="flex items-start gap-1">
-      <div className="flex h-[100px] w-[100px] shrink-0 items-start justify-center">
+      <div className="flex h-[110px] w-[185px] shrink-0 items-start justify-center">
         <img
           src={unccLogo}
           alt="UNC Charlotte logo"
-          className="mt-0 h-[99px] w-[99px] object-contain"
+          className="mt-0 h-[105px] w-[80px] object-contain"
         />
       </div>
 
@@ -601,8 +601,8 @@ export default function App() {
   </div>
 
   <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
-    <div className="flex items-start gap-5">
-      <div className="flex h-[76px] w-[76px] shrink-0 items-start justify-center">
+    <div className="flex items-start gap-6">
+      <div className="flex h-[84px] w-[84px] shrink-0 items-start justify-center">
         <img
           src={cvccLogo}
           alt="Catawba Valley Community College logo"
