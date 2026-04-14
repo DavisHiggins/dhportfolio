@@ -27,7 +27,7 @@ import dhLogo from './assets/dhtrans.png'
 import anthropologyAward from './assets/anthropologycert.png'
 import thecreek from './assets/thecreek.png'
 import unccLogo from './assets/uncclogotrans.png'
-import cvccLogo from './assets/cvcclogotrans.png'
+import cvccLogo from './assets/cvcclogotrans!.png'
 
 const NAV_ITEMS = [
   { label: 'Home', key: 'home', icon: Home },
@@ -565,82 +565,68 @@ export default function App() {
                 subtitle="Classroom efficiency, technical development, and the foundation behind my skill set."
               />
 
-              <div className="space-y-10">
+              <div className="space-y-10"/>
                 <div>
                   <h3 className="text-2xl font-semibold text-white">Academic Background</h3>
 
                   <div className="mt-6 space-y-6">
-<div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
-  <div className="flex items-start">
-    <div className="flex h-[104px] w-[104px] shrink-0 items-start justify-center">
-      <img
-        src={unccLogo}
-        alt="UNC Charlotte logo"
-        className="-mt-2 h-[100px] w-[100px] object-contain"
-      />
-    </div>
-
-    <div className="min-w-0 flex-1 -ml-3">
-      <h4 className="text-2xl font-semibold text-white">University of North Carolina at Charlotte</h4>
-
-      <p className="mt-3 text-sm text-slate-400">
-        B.S. in Data Science • Minor in Artificial Intelligence • Aug 2024 – May 2027
-      </p>
-
-      <div className="mt-6 flex flex-wrap gap-2">
-        <Pill>GPA: 3.84</Pill>
-        <Pill>2x Chancellor’s List</Pill>
-        <Pill>1x Dean’s List</Pill>
-      </div>
-
-      <p className="mt-6 text-sm leading-7 text-slate-300">
-        Building a technical foundation in analytics, machine learning, statistical thinking, and applied business problem solving while pairing coursework with internships, product development, and independent projects.
-      </p>
-    </div>
-  </div>
-
-      <div className="flex w-[240px] shrink-0 items-start justify-center self-start pt-8">
+  <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
+    <div className="flex items-start gap-5">
+      <div className="flex h-[84px] w-[84px] shrink-0 items-start justify-center">
         <img
           src={unccLogo}
           alt="UNC Charlotte logo"
-          className="h-24 w-24 object-contain"
+          className="mt-0 h-[72px] w-[72px] object-contain"
         />
+      </div>
+
+      <div className="min-w-0 flex-1">
+        <h4 className="text-2xl font-semibold text-white">University of North Carolina at Charlotte</h4>
+
+        <p className="mt-3 text-sm text-slate-400">
+          B.S. in Data Science • Minor in Artificial Intelligence • Aug 2024 – May 2027
+        </p>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          <Pill>GPA: 3.84</Pill>
+          <Pill>2x Chancellor’s List</Pill>
+          <Pill>1x Dean’s List</Pill>
+        </div>
+
+        <p className="mt-6 text-sm leading-7 text-slate-300">
+          Building a technical foundation in analytics, machine learning, statistical thinking, and applied business problem solving while pairing coursework with internships, product development, and independent projects.
+        </p>
       </div>
     </div>
   </div>
-</div>
 
   <div className="glass rounded-[2rem] px-6 py-7 shadow-soft">
-    <div className="flex items-start justify-between gap-6">
-      <div className="flex min-w-0 flex-1 items-start gap-4">
-        <div className="rounded-2xl bg-white/5 p-3 text-cyan-300">
-          <GraduationCap className="h-5 w-5" />
-        </div>
-
-        <div className="min-w-0 flex-1">
-          <h4 className="text-2xl font-semibold text-white">Catawba Valley Community College</h4>
-          <p className="mt-2 text-sm text-slate-400">Aug 2022 – May 2024</p>
-
-          <div className="mt-5 flex flex-wrap gap-2">
-            <Pill>GPA: 4.0</Pill>
-            <Pill>4x President’s List</Pill>
-          </div>
-
-          <p className="mt-6 text-sm leading-7 text-slate-300">
-            Selected for a dual-enrollment program to gain college credits while completing high school.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex w-[240px] shrink-0 items-start justify-center self-start pt-8">
+    <div className="flex items-start gap-5">
+      <div className="flex h-[84px] w-[84px] shrink-0 items-start justify-center">
         <img
           src={cvccLogo}
           alt="Catawba Valley Community College logo"
-          className="h-24 w-24 object-contain"
+          className="mt-0 h-[72px] w-[72px] object-contain"
         />
       </div>
+
+      <div className="min-w-0 flex-1">
+        <h4 className="text-2xl font-semibold text-white">Catawba Valley Community College</h4>
+
+        <p className="mt-3 text-sm text-slate-400">Aug 2022 – May 2024</p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          <Pill>GPA: 4.0</Pill>
+          <Pill>4x President’s List</Pill>
+        </div>
+
+        <p className="mt-6 text-sm leading-7 text-slate-300">
+          Selected for a dual-enrollment program to gain college credits while completing high school.
+        </p>
+      </div>
     </div>
-  </div>            
+  </div>
+</div>            
 
                 <div>
                   <h3 className="mt-16 text-2xl font-semibold text-white">Honors</h3>
@@ -738,7 +724,7 @@ export default function App() {
                   <div className="glass rounded-[1.75rem] p-5 shadow-soft">
                     <div className="text-sm text-slate-400">Technical Strengths</div>
                     <div className="mt-2 text-lg font-semibold text-white">
-                      Exploratory Data Analysis, Dashboard Development, KPI Reporting, Reporting Automation, Data Cleaning, Data Validation
+                    Exploratory Data Analysis, Dashboard Development, KPI Reporting, Reporting Automation, Data Cleaning, Data Validation
                     </div>
                   </div>
                 </div>
