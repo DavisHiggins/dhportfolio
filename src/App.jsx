@@ -574,10 +574,14 @@ export default function App() {
     <div className="flex items-start gap-2.5">
       <div className="flex h-[84px] w-[86px] shrink-0 items-start justify-center">
         <img
-          src={unccLogo}
-          alt="UNC Charlotte logo"
-          className="mt-0 h-[55px] w-[85px] object-contain"
-        />
+  src={unccLogo}
+  alt="UNC Charlotte logo"
+  className="mt-0 h-[55px] w-[85px] object-contain"
+  style={{
+    filter:
+      'brightness(0) saturate(100%) invert(74%) sepia(22%) saturate(1185%) hue-rotate(180deg) brightness(101%) contrast(101%)',
+  }}
+/>
       </div>
 
       <div className="min-w-0 flex-1">
@@ -604,14 +608,14 @@ export default function App() {
   <div className="flex items-start gap-2">
     <div className="flex h-[70px] w-[84px] shrink-0 items-start justify-center">
       <img
-        src={cvccLogo}
-        alt="Catawba Valley Community College logo"
-        className="mt-0 h-[56px] w-[55px] object-contain"
-        style={{
-          filter:
-            'hue-rotate(155deg) saturate(220%) brightness(1.15) contrast(1.08) drop-shadow(0 0 2px rgba(125, 211, 252, 0.18))',
-        }}
-      />
+  src={cvccLogo}
+  alt="Catawba Valley Community College logo"
+  className="mt-0 h-[56px] w-[55px] object-contain"
+  style={{
+    filter:
+      'hue-rotate(185deg) saturate(165%) brightness(1.02) contrast(1.08) drop-shadow(0 0 2px rgba(125, 211, 252, 0.14))',
+  }}
+/>
     </div>
 
       <div className="min-w-0 flex-1">
